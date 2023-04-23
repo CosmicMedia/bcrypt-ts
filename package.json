@@ -1,0 +1,35 @@
+{
+	"name": "@cosmicmedia/bcrypt",
+	"version": "1.0.0",
+	"description": "TypeScript fork of node.bcrypt.js",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"install": "node-pre-gyp install --fallback-to-build"
+	},
+	"keywords": [],
+	"author": "Hydrogen / CosmicMedia LLC",
+	"license": "ISC",
+	"dependencies": {
+		"@mapbox/node-pre-gyp": "^1.0.10",
+		"import-from": "^4.0.0",
+		"node-addon-api": "^6.1.0",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.0.4"
+	},
+	"devDependencies": {
+		"@types/node": "^18.16.0"
+	},
+	"binary": {
+		"module_name": "bcrypt_lib",
+		"module_path": "./lib/binding/napi-v{napi_build_version}",
+		"package_name": "{module_name}-v{version}-napi-v{napi_build_version}-{platform}-{arch}-{libc}.tar.gz",
+		"host": "https://github.com",
+		"remote_path": "CosmicMediaLLC/bcrypt-ts/releases/download/v{version}",
+		"napi_versions": [
+			3
+		]
+	},
+	"type": "module"
+}
