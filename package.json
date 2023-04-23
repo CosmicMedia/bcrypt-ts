@@ -32,5 +32,12 @@
 			3
 		]
 	},
-	"type": "module"
+	"type": "module",
+	"files": [
+		"*.d.ts",
+    	"lib/",
+		"bindings/",
+		"Makefile",
+		"binding.gyp"
+	]
 }
