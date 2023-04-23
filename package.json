@@ -6,7 +6,8 @@
 	"types": "lib/index.d.ts",
 	"scripts": {
 		"build": "tsc",
-		"install": "node-pre-gyp install --fallback-to-build"
+		"install": "node-pre-gyp install --fallback-to-build",
+		"prepare" : "npm run build && npm run install"
 	},
 	"keywords": [],
 	"author": "Hydrogen / CosmicMedia LLC",
